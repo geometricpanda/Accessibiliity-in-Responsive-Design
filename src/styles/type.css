@@ -1,0 +1,19 @@
+.heading-1 {
+    color: var(--color-white);
+    font-family: var(--font-family-heading);
+    font-size: var(--font-size-xl);
+    line-height: var(--line-height-xl);
+    margin: 0;
+}
+
+.body {
+    color: var(--color-white);
+    font-family: var(--font-family-body);
+    font-size: var(--font-size-md);
+    line-height: var(--line-height-md);
+    margin: 0 0 var(--line-height-md);
+}
+
+.body:last-child {
+    margin-bottom: 0;
+}

@@ -1,0 +1,72 @@
+:root,
+::backdrop {
+    --color-bg: #2C3E50;
+    --color-black: #000;
+    --color-white: #FFF;
+
+    --border-radius-sm: 8px;
+    --border-radius-md: 16px;
+
+    --font-family-heading: 'Space Grotesk', sans-serif;
+    --font-family-body: 'Space Grotesk', sans-serif;
+
+    --font-size-md: 1.2rem;
+    --line-height-md: 1.7rem;
+
+    --font-size-lg: 2.3rem;
+    --line-height-lg: 2.7rem;
+
+    --font-size-xl: 3rem;
+    --line-height-xl: 3.2rem;
+
+    --spacing-sm: 12px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+
+    --max-width: 80rem;
+    --modal-max-width: 95vw;
+    --modal-max-height: 95vh;
+
+}
+
+html, body {
+    margin: 0;
+    background-color: var(--color-bg);
+}
+
+.container {
+    max-width: var(--max-width);
+    margin: auto;
+    box-sizing: border-box;
+    padding: var(--spacing-md);
+}
+
+.container__title {
+    margin-bottom: var(--spacing-lg);
+    text-align: center}
+
+.grid {
+    display: grid;
+    box-sizing: border-box;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+}
+
+@media (min-width: 30em) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 48em) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 64em) {
+    .grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

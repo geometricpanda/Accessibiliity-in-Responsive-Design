@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="/"/>
+
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <title>Accessibility in Responsive Design</title>
+
+    <link rel="stylesheet" href="styles/style.css"/>
+    <link rel="stylesheet" href="styles/card.css"/>
+    <link rel="stylesheet" href="styles/dialog.css"/>
+    <link rel="stylesheet" href="styles/type.css"/>
+    <link rel="stylesheet" href="styles/button.css"/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet"/>
+
+    <script type="text/javascript">
+
+        const applyScrollLock = () => {
+            document.body.style.overflow = 'hidden';
+        }
+
+        const removeScrollLock = () => {
+            document.body.style.overflow = null;
+        }
+
+        const showModal = () => {
+            const dialog = document.getElementById('dialog');
+            dialog.showModal();
+            applyScrollLock();
+        };
+
+        const hideModal = () => {
+            const dialog = document.getElementById('dialog');
+            dialog.close();
+            removeScrollLock();
+        }
+    </script>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="container__title">
+        <h1 class="heading-1">Your recent listening</h1>
+    </div>
+
+    <div class="grid">
+
+        <div class="card">
+
+            <div class="card__content">
+                <h2 class="card__title">Feeling your oats</h2>
+            </div>
+
+            <img class="card__img"
+                 src="images/1027-2848x4272.jpeg"
+                 alt="Woman staring off camera"/>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card__content">
+                <h2 class="card__title">Best of London Indie</h2>
+            </div>
+
+            <img class="card__img"
+                 src="images/1047-3264x2448.jpeg"
+                 alt="Alleyway in London"/>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card__content">
+                <p class="card__title">
+                    Easy Sunday Listening
+                </p>
+            </div>
+
+            <img class="card__img"
+                 src="images/1068-7117x4090.jpeg"
+                 alt="Table with Jars on"/>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card__content">
+                <h2 class="card__title">Country</h2>
+            </div>
+
+            <img class="card__img"
+                 src="images/145-4288x2848.jpeg"
+                 alt="Guitar head with sepia tint"/>
+
+        </div>
+
+    </div>
+
+</div>
+
+<dialog id="dialog" class="dialog">
+
+    <div class="dialog__utils">
+        <button class="button button--outline" onclick="hideModal()">Close</button>
+    </div>
+
+    <div class="dialog__content">
+
+        <div class="dialog__head">
+            <h1 class="heading-1">Hello world</h1>
+        </div>
+
+        <div class="dialog__body">
+            <p class="body">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget sem ultricies, fermentum ligula nec,
+                molestie neque. Sed convallis enim a sapien auctor varius. Sed ultricies eu risus sed facilisis.
+                Curabitur eleifend, dolor nec suscipit condimentum.
+            </p>
+
+            <p class="body">
+                Nunc urna pellentesque leo, sed mollis mi orci et nisl. Etiam eros tortor, finibus eu magna ut, commodo
+                blandit lorem. Donec tincidunt lacus at dui finibus tempor. Integer consequat euismod diam a aliquet.
+                Maecenas dolor elit, suscipit eu odio nec, euismod vestibulum ex.
+            </p>
+
+            <p class="body">
+                Nullam pretium convallis elit sit amet facilisis. In hac habitasse platea dictumst. Vivamus sollicitudin
+                vitae justo sed porttitor.
+            </p>
+        </div>
+
+        <div class="dialog__foot">
+            <button class="button" onclick="hideModal()">OK</button>
+            <button class="button button--outline" onclick="hideModal()">Cancel</button>
+        </div>
+    </div>
+
+</dialog>
+
+
+<script>
+    (() => {
+        showModal();
+    })()
+</script>
+
+</body>
+</html>

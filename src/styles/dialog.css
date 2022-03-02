@@ -1,0 +1,52 @@
+.dialog {
+    --utils-offset: calc(var(--line-height-md) + (var(--spacing-sm) * 2));
+    max-height: var(--modal-max-height);
+    max-width: var(--modal-max-width);
+    background-color: transparent;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: var(--utils-offset) 0 0;
+    overflow: visible;
+    border: 0;
+}
+
+.dialog::backdrop {
+    border: 2px solid transparent;
+    background-color: var(--color-black);
+    opacity: 0.9;
+}
+
+.dialog__utils {
+    position: absolute;
+    display: flex;
+    justify-content: end;
+    top: 0;
+    right: 0;
+}
+
+.dialog__content {
+    box-sizing: border-box;
+    background-color: var(--color-bg);
+    padding: var(--spacing-xl);
+    border-radius: var(--border-radius-md);
+    overflow: auto;
+    max-height: calc(var(--modal-max-height) - var(--utils-offset));
+    max-width: 800px;
+}
+
+.dialog__head {
+    margin-bottom: var(--spacing-lg);
+}
+
+.dialog__body {
+    margin-bottom: var(--spacing-xl);
+}
+
+.dialog__foot {
+    display: flex;
+    gap: var(--spacing-sm);
+    justify-content: center;
+}

@@ -1,0 +1,33 @@
+.button {
+    border: 0;
+    line-height: var(--line-height-md);
+    font-size: var(--font-size-md);
+    padding: var(--spacing-sm) var(--spacing-lg);
+    background-color: var(--color-white);
+    color: var(--color-black);
+    cursor: pointer;
+    border-radius: var(--border-radius-sm);
+    font-family: var(--font-family-heading);
+}
+
+.button:focus {
+    outline-style: solid;
+    outline-color: transparent;
+    box-shadow:
+            0 0 0 2px var(--color-bg),
+            0 0 0 4px var(--color-white);
+}
+
+.button--outline {
+    border-color: transparent;
+    background-color: transparent;
+    color: var(--color-white);
+    border-radius: 0;
+}
+
+.button--outline:focus {
+    background-color: var(--color-bg);
+    box-shadow:
+            0 0 0 2px inset var(--color-white),
+            0 0 0 4px inset var();
+}

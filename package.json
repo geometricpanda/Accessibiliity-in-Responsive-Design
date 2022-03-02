@@ -1,0 +1,12 @@
+{
+  "name": "accessibility-in-responsive-design",
+  "version": "1.0.0",
+  "author": "Jim Drury <jim@jimdrury.co.uk>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "live-server": "^1.2.1"
+  }
+}

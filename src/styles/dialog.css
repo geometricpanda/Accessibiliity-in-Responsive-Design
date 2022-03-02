@@ -1,7 +1,7 @@
 .dialog {
     --utils-offset: calc(var(--line-height-md) + (var(--spacing-sm) * 2));
-    max-height: var(--modal-max-height);
     max-width: var(--modal-max-width);
+    max-height: var(--modal-max-height);
     background-color: transparent;
     position: fixed;
     top: 50%;
@@ -32,9 +32,6 @@
     background-color: var(--color-bg);
     padding: var(--spacing-xl);
     border-radius: var(--border-radius-md);
-    overflow: auto;
-    max-height: calc(var(--modal-max-height) - var(--utils-offset));
-    max-width: 800px;
 }
 
 .dialog__head {
